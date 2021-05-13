@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ .ll{
+   height: 30px;
+   width: auto;
+   background-color:pink;
+   border: 2px solid black;
+   letter-spacing: 5px;
+   position: relative;
+   
+ }
+ .pp{
+   position: absolute;
+   margin: 11px -2px;
+   display: none;
+   background-color: pink;
+ }
+ .c{
+   display: block;
+   padding: 10px 10px;
+   border: 2px solid black;
+   border-top: transparent;
+
+ }
+ .ll:hover .pp {
+   display: block;
+ }
+</style>
+<body>
+  <div class="ll"> 
+    <a class="a">菜单</a>
+    <div class="pp">
+      <a class="c">AA</a>
+      <a class="c">BB</a>
+      <a class="c">CC</a>
+      <a class="c">DD</a>
+      <a class="c">EE</a>
+      <a class="c">FF</a>
+      <a class="c">GG</a>
+      <a class="c">HH</a>
+    </div>
+    <a class="b">文本 | 文本  |文本 | 文本  | 文本  |文本 | 文本 </a>
+  </div>
+</body>
+</html>
