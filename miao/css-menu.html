@@ -7,46 +7,54 @@
   <title>Document</title>
 </head>
 <style>
- .ll{
-   height: 30px;
-   width: auto;
-   background-color:pink;
-   border: 2px solid black;
-   letter-spacing: 5px;
-   position: relative;
-   
+  body{
+    margin: 0;
+    font-size: 30px;
+  }
+  ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
  }
- .pp{
-   position: absolute;
-   margin: 11px -2px;
-   display: none;
-   background-color: pink;
+  ul.menu > li {
+    display: inline-block;
  }
- .c{
-   display: block;
-   padding: 10px 10px;
-   border: 2px solid black;
-   border-top: transparent;
-
+  li{
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  ul.menu ul {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 100%;
  }
- .ll:hover .pp {
-   display: block;
+  li:hover > ul {
+    display: block;
+ }
+  ul.menu ul ul {
+    left: 100%;
+    top: 0;
  }
 </style>
 <body>
-  <div class="ll"> 
-    <a class="a">菜单</a>
-    <div class="pp">
-      <a class="c">AA</a>
-      <a class="c">BB</a>
-      <a class="c">CC</a>
-      <a class="c">DD</a>
-      <a class="c">EE</a>
-      <a class="c">FF</a>
-      <a class="c">GG</a>
-      <a class="c">HH</a>
-    </div>
-    <a class="b">文本 | 文本  |文本 | 文本  | 文本  |文本 | 文本 </a>
-  </div>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>保存</li>
+        <li>打开</li>
+        <li>另存为
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>  
+      </ul>    
+    </li>
+    <li>编辑</li>
+    <li>视图</li>
+  </ul>
 </body>
 </html>
