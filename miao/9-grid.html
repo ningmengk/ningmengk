@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table {
+    border-collapse:collapse;
+    cursor: pointer;
+  }
+
+  col{
+    border: 3px solid blue;
+  }
+  tr{
+    border: 3px solid blue;
+  }
+  td{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    color: green;
+    text-align: center;
+  }
+  td:hover{
+    border: 3px solid red;
+  }
+
+  .float{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  }
+  .float > li{
+    box-sizing: border-box;
+    float: left;
+    color: green;
+    width: 50px;
+    height: 50px;
+    margin-left: -3px;
+    margin-top: -3px;
+    line-height: 50px;
+    border: 3px solid blue;
+    text-align: center;
+    list-style: none;
+  }
+  li:hover{
+    border:3px solid red;
+    position: relative;
+  }
+  .flex{
+    display: flex;
+    width: 200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+  }
+  .flex > li{
+    box-sizing: border-box;
+    color: green;
+    width: 50px;
+    height: 50px;
+    margin-left: -3px;
+    margin-top: -3px;
+    line-height: 50px;
+    border: 3px solid blue;
+    text-align: center;
+    list-style: none;
+  }
+  .flex>li:hover{
+    border-color: red;
+    position: relative;
+  }
+
+</style>
+<body>
+  <table>
+    <col>
+    <col>
+    <col>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+  <ul class="float">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+  <ul class="flex">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+</body>
+</html>
