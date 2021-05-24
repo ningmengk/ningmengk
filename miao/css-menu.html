@@ -22,21 +22,33 @@
   li{
     white-space: nowrap;
     position: relative;
+    background-color: silver;
   }
   
   ul.menu ul {
     position: absolute;
-    display: none;
+    visibility: hidden;
     left: 0;
     top: 100%;
+    opacity: 0;
+    transition: 1s;
  }
   li:hover > ul {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    
  }
   ul.menu ul ul {
     left: 100%;
     top: 0;
  }
+ li:hover{
+   background-color: red;
+ }
+ body > ul > li > ul > li:nth-child(3):after{
+   content: ">";
+ } 
+
 </style>
 <body>
   <ul class="menu">
@@ -46,9 +58,9 @@
         <li>打开</li>
         <li>另存为
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <li>以xx格式保存</li>
+            <li>以xx格式保存</li>
+            <li>以xx格式保存</li>
           </ul>
         </li>  
       </ul>    
