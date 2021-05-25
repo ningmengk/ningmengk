@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<style>
+  body{
+    margin: 0;
+  }
+  div{
+    width: 225px;
+    height: 225px;
+    border: 2px solid blanchedalmond;
+    box-sizing: border-box;
+    position: relative;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+  input{
+    display:none;
+  }
+  input:nth-child(1):checked ~ div img:nth-child(1),
+  input:nth-child(2):checked ~ div img:nth-child(2),
+  input:nth-child(3):checked ~ div img:nth-child(3){
+    left: 0;
+    z-index: 2;
+  }
+</style>
+<body>
+  <section>
+    <input type="radio"  name="a" id="a1"> 
+    <input type="radio"  name="a" id="a2">
+    <input type="radio"  name="a" id="a3" checked>
+    <label for="a1">图一</label>
+    <label for="a2">图二</label>
+    <label for="a3">图三</label>
+    <div>
+      <img id="a1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwghmqnXOm7elulMdNSKYNOAOt3ePpCTVLg&usqp=CAU" alt="">
+      <img id="a2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmxi8ww03GCDWUSbmNl3UcNzdyFY0Z9SmASA&usqp=CAU" alt="">
+      <img id="a3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_X1ANvbDNsZHG_VpNhtp7bIqp_mIH9fY2Q&usqp=CAU" alt="">
+    </div>
+    <div>
+      <img id="a1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwghmqnXOm7elulMdNSKYNOAOt3ePpCTVLg&usqp=CAU" alt="">
+      <img id="a2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmxi8ww03GCDWUSbmNl3UcNzdyFY0Z9SmASA&usqp=CAU" alt="">
+      <img id="a3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_X1ANvbDNsZHG_VpNhtp7bIqp_mIH9fY2Q&usqp=CAU" alt="">
+    </div>
+    <div>
+      <img id="a1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwghmqnXOm7elulMdNSKYNOAOt3ePpCTVLg&usqp=CAU" alt="">
+      <img id="a2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmxi8ww03GCDWUSbmNl3UcNzdyFY0Z9SmASA&usqp=CAU" alt="">
+      <img id="a3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_X1ANvbDNsZHG_VpNhtp7bIqp_mIH9fY2Q&usqp=CAU" alt="">
+    </div>
+  </section>
+</body>
+</html>
