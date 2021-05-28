@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html{
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction:row;
+  }
+  .a,.c,.d,.e{
+    width: 100px;
+    min-width: 100px;
+    height: 100%;
+    background-color: blue;
+  }
+  .b{
+    flex-grow: 1;
+    width: auto;
+  }
+  header{
+    height: 90px;
+    background-color: red;
+  }
+  main{
+    overflow: scroll;
+    height:calc(100% - 70px);
+  }
+</style>
+<body>
+  <div class="a">a</div>
+  <div class="b">
+    <header></header>
+    <main> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sint neque commodi quasi consectetur eum sed, nisi nemo odio laudantium, cumque deserunt minus enim unde perspiciatis voluptates sit dignissimos fuga. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae sit nihil ducimus soluta quos fugit aliquid neque eligendi facere at, deleniti culpa magnam laborum, inventore vero placeat laudantium quidem corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis neque molestiae tempora quibusdam quaerat? Veniam omnis recusandae suscipit sed alias architecto dicta nesciunt molestias laudantium provident. Et iste provident amet?</main>
+  </div>
+  <div class="c">c</div>
+  <div class="d">d</div>
+  <div class="e">f</div>
+</body>
+</html>

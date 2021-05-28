@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  header{
+    height: 70px;
+    width: 100%;
+    
+    background-color: silver;
+  }
+
+  div{
+    width: 100px;
+    height: 100%;
+    min-width: 100px;
+	  max-width: 100px;
+    background-color: skyblue;
+    flex-grow: 0;
+  }
+  main{
+    flex-grow: 1;
+    width: auto;
+    max-width: calc(100% - 100px);
+    background-color:blue;
+    overflow: scroll;
+    overflow-wrap:break-word;
+  }
+</style>
+<body>
+    <header></header>
+    <div></div>
+    <main>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi aut laborum incidunt veniam? Quos incidunt consequatur vitae aperiam illum corrupti iusto, eius dignissimos dolor perferendis ipsam ipsa. Sint, illo optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium amet praesentium dolor, laborum, eaque debitis cupiditate, ad voluptatem quo velit eveniet eligendi qui architecto doloribus rerum deleniti? Maiores, architecto dolorem? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati provident dolorum doloribus veritatis, voluptatibus reiciendis, fugiat nostrum cupiditate quasi iste deleniti fugit vitae sit? Natus similique ab a error nihil!</main>
+</body>
+</html>
