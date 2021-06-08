@@ -11,7 +11,7 @@ console.log((a+b)*c);
 
 var a = 1, b = 1, c = 3
 
-console.log((a+b)/c);
+console.log(parseInt((a+b)/c));
 
 var a = 10, b = 3
 
@@ -39,8 +39,9 @@ console.log((5 * (a - 32) / 9).toFixed(5));
 
 var r = 3,pi = 3.14159
 
-console.log(2 * r+" "+(2 * pi * r).toFixed(4)+" "+(pi * r * r).toFixed(4));
-
+console.log((2 * r).toFixed(4));
+console.log((2 * pi * r).toFixed(4));
+console.log((pi * r * r).toFixed(4));
 var a = 1, b = 2
 
 console.log((1 / (1 / a + 1 / b)).toFixed(2));
@@ -76,9 +77,7 @@ var X3 = 0, Y3 = 3
 
 var p = ((X2- X1) + (Y3 - Y1) + Math.sqrt((X2 - X3)*(X2 - X3) + (Y3 - Y2 )*(Y3 - Y2 ))) / 2 
 
-var s = Math.sqrt(p*(p-(X2- X1))*(p- (Y3 - Y1))*(p-Math.sqrt((X2 - X3)*(X2 - X3) + (Y3 - Y2 )*(Y3 - Y2 ))))
-console.log(s);
-
+console.log((Math.sqrt(p*(p-(X2- X1))*(p- (Y3 - Y1))*(p-Math.sqrt((X2 - X3)*(X2 - X3) + (Y3 - Y2 )*(Y3 - Y2 ))))).toFixed(2));
 
 
 var a = 1, b = 4, c = 100
@@ -92,5 +91,5 @@ console.log(a * b);
 var a = 3
 
 console.log(2 ** a);
-
-
+a = 2
+console.log( a.toFixed(2))
