@@ -92,4 +92,38 @@ var a = 3
 
 console.log(2 ** a);
 a = 2
-console.log( a.toFixed(2))
+console.log(a.toFixed(2))
+
+var n = 1
+if (n > 0) {
+  console.log('postitive');
+} else if(n == 0){
+  console.log('zero');
+} else {
+  console.log('negative');
+}
+var a = -3.14
+console.log(Math.abs(a));
+
+var n = 65
+if (n % 2 == 1) {
+  console.log('odd');
+} else{
+  console.log('even');
+}
+
+var n = "A"
+console.log(n.charCodeAt());
+if ((n.charCodeAt()) % 2 == 1) {
+  console.log('YES');
+} else{
+  console.log('NO');
+}
+var x = 1000, y = 100
+if (x > y) {
+  console.log('>');
+} else if(">"){
+  console.log('=');
+} else {
+  console.log('<');
+}
