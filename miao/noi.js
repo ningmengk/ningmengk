@@ -39,7 +39,7 @@ console.log((5 * (a - 32) / 9).toFixed(5));
 
 var r = 3,pi = 3.14159
 
-console.log(2 * r, (2 * pi * r).toFixed(4), (pi * r * r).toFixed(4));
+console.log(2 * r+" "+(2 * pi * r).toFixed(4)+" "+(pi * r * r).toFixed(4));
 
 var a = 1, b = 2
 

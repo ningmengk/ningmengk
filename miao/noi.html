@@ -18,7 +18,7 @@
   var b = Number(prompt('请输入b'))
   var c = Number(prompt('请输入c'))
 
-  console.log((a+b)/c);
+  console.log(parseInt(a+b)/c);
 </script>
 
 <script id="ch0103/04">
@@ -62,7 +62,7 @@
 <script id="ch0103/09">
 var r = Number(prompt('请输入r')),pi = 3.14159
 
-console.log(2 * r, (2 * pi * r).toFixed(4), (pi * r * r).toFixed(4));
+console.log(2 * r+" "+(2 * pi * r).toFixed(4)+" "+(pi * r * r).toFixed(4));
 </script>
 <script id="ch0103/10">
   var a = Number(prompt('请输入a'))
@@ -88,7 +88,7 @@ console.log((a % b).toFixed(4));
   console.log(a % 10 + "" + parseInt((a / 10) % 10) + "" + parseInt(a /100));
 </script>
 <script id="ch0103/14">
-var h = Number(prompt('请输入h')), r = Number,pi = 3.14159
+var h = Number(prompt('请输入h')), r = Number(prompt('请输入r')),pi = 3.14159
 
 console.log(Math.ceil((20 * 1000) / (pi * r * r * h)));
 </script>
@@ -110,7 +110,7 @@ var X3 = Number(prompt('请输入X3')), Y3 = Number(prompt('请输入Y3'))
 
 var p = ((X2- X1) + (Y3 - Y1) + Math.sqrt((X2 - X3)*(X2 - X3) + (Y3 - Y2 )*(Y3 - Y2 ))) / 2 
 
-console.log( Math.sqrt(p*(p-(X2- X1))*(p- (Y3 - Y1))*(p-Math.sqrt((X2 - X3)*(X2 - X3) + (Y3 - Y2 )*(Y3 - Y2 )))));
+console.log((Math.sqrt(p*(p-(X2- X1))*(p- (Y3 - Y1))*(p-Math.sqrt((X2 - X3)*(X2 - X3) + (Y3 - Y2 )*(Y3 - Y2 ))))).toFixed(2));
 
 </script>
 
