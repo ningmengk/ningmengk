@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+  <title>Document</title>
+</head>
+<style>
+  html{
+    background-color: wheat;
+  }
+  .hear{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(51,51,51);
+    
+  }
+  a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #b0b0b0;
+    line-height: 40px;
+  }
+  a:hover{
+    color: #fff;
+  }
+  .sep{
+    margin: 0.3em;
+    color: #424242;
+  }
+  .shop{
+    width: 120px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #b0b0b0;
+    line-height: 40px;
+    float: right;
+  }
+  .shop:hover{
+    color: rgb(255,103,0);
+  }
+  .hear-right{
+    float: right;
+    height: 40px;
+  }
+  .miull{
+    width: 234px;
+    height: 460px;
+  }
+  .miul {
+    padding-inline-start:0;
+    list-style: none;
+    color: white;
+    margin-top: 20px;
+    background-color: rgba(162,160,160,0.3);
+  }
+  .miul > li{
+    height: 42px;
+    width: 234px;
+    line-height: 42px;
+  }
+  .miul > li:hover{
+    background-color: red;
+  }
+  p{
+    padding-left: 30px;
+  }
+  div.header-nav{
+    float: left;
+    width:850px;
+    line-height: 100px;
+  }
+  .header-logo{
+    float: left;
+    width:62px;
+    margin-top:22px;
+  }
+  .logo{
+    position: relative;
+    display:block;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+  }
+
+  .search-btn,.search-text{
+    position: absolute;
+    top: 0;
+    border: 1px solid #e0e0e0;
+    outline: 0;
+    right:51px;
+    z-index: 1;
+    width: 223px;
+    height: 48px;
+    padding:0 10px;
+    line-height:48px;
+  }
+  .search-btn:hover,.search-text:hover{
+    background-color:#ff6700
+  }
+  div.header-search{
+    float: right;
+    width:296px;
+    height:50px;
+    margin-top:25px
+  }
+  div.search-form{
+    position: relative;
+    width:296px;
+    height:50px;
+    z-index:20px;
+  }
+  div.container{
+    display: inline-block;
+    position: relative;
+    width: 1226px;
+    height: 100px;
+    margin-right:auto;
+    margin-left: auto;
+  }
+  .nav-list {
+    list-style: none;
+    position:relative;
+    float:left;
+    width:1100px;
+    height:88px;
+    margin:0;
+    list-style-type:none;
+    z-index: 10;
+    font-size: 16px;
+  }
+  .nav-item{
+    float:left;
+    height:80px;
+    width:102px;
+  }
+
+
+</style>
+<body>
+  <div class="hear">
+    <a href="">小米商城</a>
+    <span class="sep">|</span>
+    <a href="">MIUI</a>
+    <span class="sep"></span>
+    <a href="">loT</a>
+    <span class="sep">|</span>
+    <a href="">云服务</a>
+    <span class="sep">|</span>
+    <a href="">天星科技</a>
+    <span class="sep">|</span>
+    <a href="">有品</a>
+    <span class="sep">|</span>
+    <a href="">小爱开放平台</a>
+    <span class="sep">|</span>
+    <a href="">企业团购</a>
+    <span class="sep">|</span>
+    <a href="">资质证照</a>
+    <span class="sep">|</span>
+    <a href="">协议规则</a>
+    <span class="sep">|</span>
+    <a href="">下载app</a>
+    <span class="sep">|</span>
+    <a href="">智能生活</a>
+    <span class="sep">|</span>
+    <a href="">Select Location</a>
+    <span class="shop">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="gzwuie">购物车（0）</span>
+    </span>
+    <span class="hear-right">
+      <a href="">登入</a>
+      <span class="sep">|</span>
+      <a href="">注册</a>
+      <span class="sep">|</span>
+      <a href="">消息通知</a>
+    </span>
+  </div>
+  <div class="container">
+    <div class="header-logo">
+      <img src="https://s02.mifile.cn/assets/static/image/logo-mi2.png" title="小米官网" class="logo ir"></a>
+    </div>
+    <div class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item">小米手机</li>
+        <li class="nav-item">Redmi手机</li>
+        <li class="nav-item">电视</li>
+        <li class="nav-item">笔记本</li>
+        <li class="nav-item">家电</li>
+        <li class="nav-item">智能硬件</li>
+        <li class="nav-item">路由器</li>
+      </ul>
+    </div>
+      <div class="header-search">
+        <form action="https://search.mi.com/search" class="search-form">
+          <input type="search" id="search" class="search-text">
+          <input type="submit" id="submit" class="search-btn">
+        </form>
+      </div>
+  </div>
+
+  <div class="miull">
+    <ul class="miul">
+      <li class="uzji"><p>手机 电话卡</p></li>
+      <li class="dmui"><p>电视 盒子</p></li>
+      <li class="bijibf"><p>笔记本 显示器</p></li>
+      <li class="jxdm"><p>家电 插线板</p></li>
+      <li class="iuxk"><p>出行 穿戴</p></li>
+      <li class="ving"><p>智能 路由器</p></li>
+      <li class="dmyr"><p>电源 配件</p></li>
+      <li class="erji"><p>耳机 音箱</p></li>
+      <li class="jmkh"><p>健康 儿童</p></li>
+      <li class="ugho"><p>生活 箱包</p></li>
+    </ul>
+  </div>
+</body>
+</html>

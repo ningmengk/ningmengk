@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  overflow-y: scroll;
+}
+a {
+  text-decoration: none;
+}
+.top-nav {
+  background-color: #333;
+  height: 40px;
+}
+.top-nav .top-nav-inner {
+  width: 1226px;
+  margin: auto;
+  line-height: 40px;
+}
+.top-nav .top-nav-inner a {
+  color: #ddd;
+}
+.top-nav .top-nav-inner .sep {
+  color: #ddd;
+  margin: 0px 4px;
+}
+.top-nav .top-nav-inner div.funcs {
+  float: right;
+}
