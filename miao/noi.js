@@ -303,6 +303,7 @@ if (c == "+") {
 } else {
   console.log('Invalid operator!')
 }
+debugger
 var a = 1, b = 0, c = 1
 if (b * b == 4 * a * c) {
   console.log('x1=x2='+((-b + Math.sqrt(b*b-4*a*c))/(2*a)));
@@ -315,7 +316,11 @@ if (b * b == 4 * a * c) {
 
 
 
-var a = 10, b = 4, c = 9
-
-console.log(a - (Math.ceil(c / b)));
-
+var a = 7
+var b = 15
+var sum = 0
+for(var i=a; i<b ; i += 2){
+  sum += i
+  
+}
+console.log(sum);
