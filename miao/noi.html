@@ -763,25 +763,23 @@ while(n>=1){
 }
 </script>
 <script id="ch0105/29">
-var n = Number(prompt('请输入n'))
-var a = 0
-var sum = 0
-while(Math.abs(n)){
-  var b = n % 10
-  n = parseInt(n /10)
-  if (a !== 0 || Math.abs(b) > 0) {
-    a += 1
-  }else if(a == 0 && b == 0 ){
-    continue
-  }
-  console.log(b);
-  if (a == 1) {
-    sum = b
-  }else if(a > 1){
-    sum += b * Math.pow(10,a-1)
-  }
+var n = Number(prompt())
+var sign = 1
+
+if (n < 0) {
+  sign = -1
+  n = -n
 }
-console.log(sum);
+
+var result = 0
+
+do {
+  var digit = n % 10
+  result = result * 10 + digit
+  n = (n - digit) / 10
+} while (n > 0)
+
+console.log(sign * result)
 
 </script>
 
@@ -815,7 +813,7 @@ for (var i=1; i<=n ; i++){
   }
   if (c == false) {
     if (l) {
-      console.log(',');
+      console.log(', ');
     }
     console.log(i);
     l = true
@@ -911,13 +909,20 @@ for(var i=1;i<=m || hp>=0; i++){
 console.log(n);
 </script>
 <script id="ch0105/38">
-var n = Number(prompt('请输入n'))
-for (var i = n+1; i >=n ; i--){
-  var factor = Number(prompt('请输入'+i+'的次方'))
-  if (i>0) {
-    console.log(factor * i);
+var k = Number(prompt('请输入k'))
+for(var c = 0;c<k;c++){
+  var n = Number(prompt('请输入n'))
+  if (n==0) {
+    var factor = Number(prompt())
+    console.log(0);
+  }else{
+  for (var i = n; i >=0 ; i--){
+    var factor = Number(prompt('请输入'+i+'的次方'))
+    if (i>0) {
+      console.log(factor * i);
+    }
   }
-
+  }
 }
 </script>
 <script id="ch0105/39">
