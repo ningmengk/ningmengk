@@ -796,7 +796,6 @@ while(n>=1){
     c++
   }
 }
-console.log(c);
 if (n % 19 == 0 && c === b) {
   console.log('YES');
 }else{
@@ -806,8 +805,21 @@ if (n % 19 == 0 && c === b) {
 <script id="ch0105/31">
 var n = Number(prompt('请输入n'))
 var m = Number(prompt('请输入m'))
-for (var i=0; i<n ; i++){
-  
+var l = false
+for (var i=1; i<=n ; i++){
+  var c = true
+  for(var j=1;j<=i&&j<=m;j++){
+    if(i % j == 0){
+      c = !c
+    }
+  }
+  if (c == false) {
+    if (l) {
+      console.log(',');
+    }
+    console.log(i);
+    l = true
+  }
 }
 </script>
 
