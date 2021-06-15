@@ -442,7 +442,7 @@ for(var i=0; i<n; i++){
 console.log(sum,((sum)/n).toFixed(5));
 </script>
 <script id="ch0105/05">
-var a = Number(prompt('请输入n'))
+var n = Number(prompt('请输入n'))
 var c=0
 for(var i=0;i<n ;i++){
   var b = Number(prompt('请输入b'))
@@ -483,7 +483,7 @@ console.log(a,b,c,(a+b+c));
 <script id="ch0105/08">
 var n = Number(prompt('请输入n'))
 var b=0
-for(var i=0; i<n ; i++){
+for(var i=1; i<n ; i++){
   var a = Number(prompt('请输入a'))
   b += a
 }
@@ -493,8 +493,10 @@ console.log(((n-2)*180)-b);
 var a = Number(prompt('请输入a'))
 var b = Number(prompt('请输入b'))
 var sum = 0
-for(var i=a; i<=b ; i+2){
-   sum += i
+for(var i=a; i<=b ; i++){
+  if (i%2 == 1) {
+    sum += i  
+  }
 }
 console.log(sum);
 </script>
@@ -569,11 +571,12 @@ var a = 200
 var n = Number(prompt('请输入n'))
 var k = Number(prompt('请输入k'))
 var sum =0
-var i = 0
-while(a > sum){
+for (var i = 1; i <= 20; i++) {
   sum += n;
-  a += a*(k/100);
-  i++;
+  if (sum>=a) {
+    break;
+  }
+  a = a*(1+k/100);
 }
 console.log(i);
 </script>
@@ -688,14 +691,14 @@ console.log(stock * 1.2);
 <script id="ch0105/23">
 var m = Number(prompt('请输入m'))
 var n = Number(prompt('请输入n'))
-var b = null
-for(var i = 0 ; i < n  ; i++){
+var b = m
+for(var i = 1 ; i <= n  ; i++){
   var a = Number(prompt('请输入a'))
   if (b <= 0){
     console.log(n-i);
     break
   }
-  b = m - a
+  b = b - a
 }
 </script>
 
@@ -787,13 +790,14 @@ var n = Number(prompt('请输入n'))
 var b = Number(prompt('请输入b'))
 var c = 0 
 while(n>=1){
-  var b = n % 10
+  var d = n % 10
   n = parseInt(n /10)
-  if (n == 3) {
+  if (d == b) {
     c++
   }
 }
-if (n % 19 == 0 && c >= b) {
+console.log(c);
+if (n % 19 == 0 && c === b) {
   console.log('YES');
 }else{
   console.log('NO');
@@ -818,7 +822,7 @@ for(var i=1; i < n ; i++){
   sum += a/c
 }
 
-console.log(sum);
+console.log(sum.toFixed(4));
 </script>
 <script id="ch0105/33">
 var n = Number(prompt('请输入n'))
