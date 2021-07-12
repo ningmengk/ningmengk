@@ -25,10 +25,14 @@ var ningmengk = function () {
   }
   function difference(arr, [value]) {
     var a = new Set(arr)
+    var b = []
     for (var x of [value]) {
       if(a.has(x)) a.delete(x)
     }
-    return a
+    a.forEach(function (value){
+      b.push(value)
+    })
+    return b
   }
   function drop(arr, n=1) {
     var a = []
