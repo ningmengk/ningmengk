@@ -9,9 +9,12 @@ var ningmengk = function () {
         i == 0
         arr.splice(0, n)
       }
+      if (arr.length < n) {
+        b.push(arr)
+        break
+      }
       a.push(arr[i])
     }
-    b.push(a)
     return b
   }
   function compact(arr) {
