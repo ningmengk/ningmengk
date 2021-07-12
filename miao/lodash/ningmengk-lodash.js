@@ -26,7 +26,7 @@ var ningmengk = function () {
   function difference(arr, [value]) {
     var a = new Set(arr)
     for (var x of [value]) {
-      if(a.has(x)) a.devare(x)
+      if(a.has(x)) a.delete(x)
     }
     return a
   }
