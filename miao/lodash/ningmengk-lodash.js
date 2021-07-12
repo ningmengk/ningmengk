@@ -61,6 +61,29 @@ var ningmengk = function () {
     }
     return sum
   }
+  function sumBy(arr, [iteratee = _.identity]) {
+    var sum = 0
+    for (let x of arr[value]) {
+      sum += x.value
+    }
+    return sum
+  }
+  function reverse(arr) {
+    var a = []
+    for (var i = arr.length - 1; i < 0; i--){
+      a.push(arr[i])
+    }
+    return a
+  }
+  function NaN(value) {
+    var reg = /D/
+    return reg.test(value)
+  }
+  function isNull(value) {
+    if (value) return true
+    return false
+  }
+  
   return {
     chunk,
     compact,
@@ -68,5 +91,9 @@ var ningmengk = function () {
     drop,
     dropRight,
     sum,
+    sumBy,
+    reverse,
+    NaN,
+    isNull,
   };
 }()
