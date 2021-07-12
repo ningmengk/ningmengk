@@ -813,7 +813,7 @@ for (var i=1; i<=n ; i++){
   }
   if (c == false) {
     if (l) {
-      console.log(', ');
+      console.log(',');
     }
     console.log(i);
     l = true
@@ -1057,4 +1057,246 @@ for(var i=1; i<=n ; i++){
 }
 console.log(sum);
 
+</script>
+<script id="narcissistic">
+function narcissistic(x) {
+  let y=x
+  let i =0
+  let cars=[]
+  let sum = 0
+  while(x>=1){
+  var b = x % 10
+  x = parseInt(x /10)
+  console.log(b);
+  cars[i]=b
+  console.log(cars[i]);
+  i++
+  console.log('位数',i);
+  }
+  for(var c=0; c<i ; c++){
+    sum +=Math.pow(cars[c],i)
+    console.log(sum);
+  }
+  console.log(y);
+  if (Number(sum) == Number(y)) {
+    console.log('是自幂数');
+  }else{
+    console.log('不是自幂数');
+  }
+}
+narcissistic(153)
+</script>
+<script id="narcissistics">
+function narcissistics() {
+  for(var x =1;x<=10000;x++){
+    let y=x
+    let i =0
+    let cars=[]
+    let sum = 0
+    while(x>=1){
+    var b = x % 10
+    x = parseInt(x /10)
+    console.log(b);
+    cars[i]=b
+    console.log(cars[i]);
+    i++
+    console.log('位数',i);
+    }
+    for(var c=0; c<i ; c++){
+      sum +=Math.pow(cars[c],i)
+      console.log(sum);
+    }
+    console.log(y);
+    if (Number(sum) == Number(y)) {
+      console.log('是自幂数');
+    }else{
+      console.log('不是自幂数');
+    }
+  }
+}
+narcissistics()
+</script>
+<script id="palindrom">
+function palindrom(x){
+  let y=true
+  let i =0
+  let cars=[]
+  let sum = 0
+  while(x>=1){
+  var b = x % 10
+  x = parseInt(x /10)
+  console.log(b);
+  cars[i]=b
+  console.log(cars[i]);
+  i++
+  console.log('位数',i);
+  }
+  for(var c=1;c<=Math.ceil(i/2);c++){
+    console.log('整数第'+c+'位是'+cars[c-1]);
+    console.log('倒数第'+c+'位是'+cars[length -c]);
+    if (cars[c-1] == cars[length -c]) {
+      continue
+    }else{
+      y = false
+    }
+  }
+  if (y) {
+    console.log('是回文数');
+  }else{
+    console.log('不是回文数');
+  }
+}
+
+palindrom(1234321)
+
+</script>
+<script id="weekday">
+function weekday(x,y){
+  let z =0
+  for(var i=1;i<x;i++){
+    if (i % 400 == 0||i % 4==0 && i % 100==0) {
+      z += 366
+    }else{
+      z += 355
+    }
+  }
+  console.log(z);
+  if ((i % 400 == 0||i % 4==0 && i % 100==0)) {
+    switch(y-1){
+      case 12: z += 31
+      case 11: z += 30
+      case 10: z += 31
+      case 9: z += 30
+      case 8: z += 31
+      case 7: z += 31
+      case 6: z += 30
+      case 5: z += 31
+      case 4: z += 30
+      case 3: z += 31
+      case 2: z += 29
+      case 1: z += 31
+    }
+  }else{
+    switch(y-1){
+      case 12: z += 31
+      case 11: z += 30
+      case 10: z += 31
+      case 9: z += 30
+      case 8: z += 31
+      case 7: z += 31
+      case 6: z += 30
+      case 5: z += 31
+      case 4: z += 30
+      case 3: z += 31
+      case 2: z += 28
+      case 1: z += 31
+    }
+  }
+  console.log((z+1)%7);
+}
+
+weekday(2021,6)
+
+</script>
+<script id="complete-number">
+function completenumber(x){
+  sum=0
+  for(var i=1;i<=x/2 ; i++){
+    if (x % i == 0) {
+      sum += i
+    }
+  }
+  if (sum == x) {
+    console.log('Yes');
+  } else{
+    console.log('NO');
+  }
+}
+completenumber(6)
+</script>
+<script id="complete-numbers">
+function completenumbers(){
+  for(var x = 1; x <=1000;x++){
+    sum=0
+    for(var i=1;i<=x/2 ; i++){
+      if (x % i == 0) {
+        sum += i
+      }
+    }
+    if (sum == x) {
+      console.log(x);
+    }
+  }
+}
+completenumbers()
+</script>
+<script id="prime">
+function prime(x){
+  let y =true
+  for(var i = 2; i < x; i++){
+    if (x % i == 0) {
+      y = false
+    }
+  }
+  if (y&&x>=2) {
+    console.log('YES');
+  } else{
+    console.log('NO');
+  }
+}
+prime(7)
+</script>
+
+<script id="primes">
+function primes(){
+  for(var x = 2; x <=1000;x++){
+    let y =true
+    for(var i = 2; i < x; i++){
+      if (x % i == 0) {
+        y = false
+      }
+    }
+    if (y) {
+      console.log(x);
+    }
+  }
+}
+primes()
+</script>
+
+<script id="lcf&lcm">
+function lcflcm(x,y){ 
+  let z=null
+  for(var i =1;i<=Math.min(x,y);i++){
+    if (x % i ==0&&y%i ==0) {
+     
+      z = i
+    }
+  }
+  console.log(z,(x*y)/z);
+}
+
+lcflcm(15,75)
+</script>
+<script id="sqrt">
+ var trailingZeroes = function(n) {
+    let a=1
+    let b=0
+    let c=0
+    for(var i=2;i<=n;i++){
+        a *= i
+    }
+    while(a>1){
+        console.log(b);
+        console.log(a);
+        b = a % 10
+        a = parseInt(a/10)
+        if(b !== 0){
+            break
+        }
+        c++
+    }
+    return c
+};
+trailingZeroes(30)
 </script>
