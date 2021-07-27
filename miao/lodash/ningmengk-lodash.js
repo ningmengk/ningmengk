@@ -3,13 +3,13 @@ var ningmengk = function () {
     var a = []
     var b = []
     for (var i = 0;arr.length; i++){
-      if (i == n - 1) {
+      if (i == n) {
         b.push(a)
         a = []
         i == 0
         arr.splice(0, n)
       }
-      if (arr.length < n) {
+      if (arr.length <= n) {
         b.push(arr)
         break
       }
@@ -35,10 +35,7 @@ var ningmengk = function () {
     for (var x of [value]) {
       if(a.has(x)) a.delete(x)
     }
-    a.forEach(function (value){
-      b.push(value)
-    })
-    return b
+    return a
   }
   function drop(arr, n=1) {
     var a = []
@@ -131,12 +128,20 @@ var ningmengk = function () {
     return array[0]
   }
   function indexOf(array, value, fromIndex = 0) {
+    if (fromIndex < 0) {
+      for (var i = arr.length-1; i>=0; i--) {
+        if (array[i] = value) {
+          return i + 1
+        }
+      }
+
+    }
     for (var i = fromIndex; i < array.length; i++) {
       if (array[i] = value) {
-        return i
+        return i + 1
       }
     }
-    return false
+    return -1
   }
   function initial(array) {
     array.pop()
@@ -172,5 +177,6 @@ var ningmengk = function () {
     indexOf,
     initial,
     last,
+    nth,
   };
 }()
