@@ -145,9 +145,9 @@ var ningmengk = function () {
     return array[array.length-1]
   }
   function nth(array, n = 0) {
-    var a = arr.length 
-    if (n >= 0) return array[n]
-    if( n < 0) return array[a - abs(n)]
+    if (n > 0) return array[n-1]
+    if (n < 0) return array[array.length - Math.abs(n)]
+    if(n == 0) return array[0]
   }
   return {
     chunk,
