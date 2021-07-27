@@ -35,7 +35,7 @@ var ningmengk = function () {
     for (var x of [value]) {
       if(a.has(x)) a.delete(x)
     }
-    return a
+    return [...a]
   }
   function drop(arr, n=1) {
     var a = []
@@ -73,14 +73,14 @@ var ningmengk = function () {
     return reg.test(value)
   }
   function isNull(value) {
-    if (value==null) return true
+    if (value==null && value !== undefined) return true
     return false
   }
-  function add(number,number) {
-    return number +number
+  function add(number,number2) {
+    return number + number2
   }
   function max(arr) {
-    var a = null
+    var a 
     for (var i = 0; i < arr.length-1; i++){
       if (arr[i] > a) {
         a = arr[i]
@@ -96,7 +96,7 @@ var ningmengk = function () {
     return sum/arr.length
   }
   function min(arr) {
-    var a = null
+    var a 
     for (var i = 0; i < arr.length - 1; i++){
       if (arr[i] < a) {
         a = arr[i]
@@ -111,17 +111,15 @@ var ningmengk = function () {
     return multiplier-multiplicand
   }
   function clamp(number, lower, upper) {
-    if (number > upper - lower) {
-      return false
-    }
-    if (number >= 0) {
-      return lower + number
+    if (number > 0) {
+      if(number > upper) return upper
     } else {
-      return upper - number
+      if(number < lower) return lower
     }
+    return false
   }
-  function inRange(number, start = 0, end) {
-    return number>=start &&number<end
+  function inRange(number, [start = 0], end) {
+    return number>=start && number<end
 
   }
   function head(array) {
@@ -129,16 +127,17 @@ var ningmengk = function () {
   }
   function indexOf(array, value, fromIndex = 0) {
     if (fromIndex < 0) {
-      for (var i = arr.length-1; i>=0; i--) {
+      for (var i = arr.length - 1; i >= 0; i--) {
         if (array[i] = value) {
           return i + 1
         }
       }
 
-    }
-    for (var i = fromIndex; i < array.length; i++) {
-      if (array[i] = value) {
-        return i + 1
+    } else {
+      for (var i = fromIndex; i < array.length; i++) {
+        if (array[i] = value) {
+          return i + 1
+        }
       }
     }
     return -1
