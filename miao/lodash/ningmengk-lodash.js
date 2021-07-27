@@ -26,9 +26,9 @@ var ningmengk = function () {
     }
     return a
   }
-  function difference(arr, [value]) {
+  function difference(arr, ...[value]) {
     var a = new Set(arr)
-    for (var x of [value]) {
+    for (var x of [...value]) {
       if(a.has(x)) a.delete(x)
     }
     return [...a]
@@ -114,7 +114,11 @@ var ningmengk = function () {
     }
     return false
   }
-  function inRange(number,end,start = 0,) {
+  function inRange(number, start, end) {
+    if (end = undefined) {
+      end = start
+      start = 0 
+    }
     return number>=start && number<end
   }
   function head(array) {
@@ -122,7 +126,7 @@ var ningmengk = function () {
   }
   function indexOf(array, value, fromIndex = 0) {
     if (fromIndex < 0) {
-      for (var i = array.length - 1; i >= 0; i--) {
+      for (var i = 0; i < array.length; i++) {
         if (array[i] = value) {
           return i + 1
         }
@@ -145,9 +149,14 @@ var ningmengk = function () {
     return array[array.length-1]
   }
   function nth(array, n = 0) {
-    if (n > 0) return array[n-1]
+    if (n >= 0) return array[n]
     if (n < 0) return array[array.length - Math.abs(n)]
-    if(n == 0) return array[0]
+  }
+  function divided(dividend, divisor) {
+    return dividend/divisor
+  }
+  function subtract(minuend, subtrahend) {
+    return minuend- subtrahend
   }
   return {
     chunk,
@@ -172,5 +181,7 @@ var ningmengk = function () {
     initial,
     last,
     nth,
+    divided,
+    subtract,
   };
 }()
