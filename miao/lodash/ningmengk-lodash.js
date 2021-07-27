@@ -1,9 +1,9 @@
 var ningmengk = function () {
   function chunk(arr, n) {
-    var a = [];
+    var a = []
     var b = []
-    for (var i = 0; i < arr.length; i++){
-      if (i == n) {
+    for (var i = 0;arr.length; i++){
+      if (i == n - 1) {
         b.push(a)
         a = []
         i == 0
@@ -27,7 +27,10 @@ var ningmengk = function () {
     return a
   }
   function difference(arr, [value]) {
-    var a = new Set(arr)
+    var a = new Set()
+    for (let x of arr) {
+      a.add(x)
+    }
     var b = []
     for (var x of [value]) {
       if(a.has(x)) a.delete(x)
@@ -61,16 +64,9 @@ var ningmengk = function () {
     }
     return sum
   }
-  function sumBy(arr, [iteratee = _.identity]) {
-    var sum = 0
-    for (let x of arr[value]) {
-      sum += x.value
-    }
-    return sum
-  }
   function reverse(arr) {
     var a = []
-    for (var i = arr.length - 1; i < 0; i--){
+    for (var i = arr.length - 1; i >= 0; i--){
       a.push(arr[i])
     }
     return a
@@ -80,10 +76,80 @@ var ningmengk = function () {
     return reg.test(value)
   }
   function isNull(value) {
-    if (value) return true
+    if (value==null) return true
     return false
   }
-  
+  function add(number,number) {
+    return number +number
+  }
+  function max(arr) {
+    var a = null
+    for (var i = 0; i < arr.length-1; i++){
+      if (arr[i] > a) {
+        a = arr[i]
+      }
+    }
+    return a
+  }
+  function mean(arr) {
+    var sum = 0
+    for (var x of arr) {
+      sum += x
+    }
+    return sum/arr.length
+  }
+  function min(arr) {
+    var a = null
+    for (var i = 0; i < arr.length - 1; i++){
+      if (arr[i] < a) {
+        a = arr[i]
+      }
+    }
+    return a
+  }
+  function multiply(multiplier, multiplicand) {
+    return multiplier*multiplicand
+  }
+  function subtract(multiplier, multiplicand) {
+    return multiplier-multiplicand
+  }
+  function clamp(number, lower, upper) {
+    if (number > upper - lower) {
+      return false
+    }
+    if (number >= 0) {
+      return lower + number
+    } else {
+      return upper - number
+    }
+  }
+  function inRange(number, start = 0, end) {
+    return number>=start &&number<end
+
+  }
+  function head(array) {
+    return array[0]
+  }
+  function indexOf(array, value, fromIndex = 0) {
+    for (var i = fromIndex; i < array.length; i++) {
+      if (array[i] = value) {
+        return i
+      }
+    }
+    return false
+  }
+  function initial(array) {
+    array.pop()
+    return array
+  }
+  function last(array) {
+    return array[array.length-1]
+  }
+  function nth(array, n = 0) {
+    var a = arr.length 
+    if (n >= 0) return array[n]
+    if( n < 0) return array[a - abs(n)]
+  }
   return {
     chunk,
     compact,
@@ -91,9 +157,20 @@ var ningmengk = function () {
     drop,
     dropRight,
     sum,
-    sumBy,
     reverse,
     NaN,
     isNull,
+    add,
+    max,
+    mean,
+    min,
+    multiply,
+    subtract,
+    clamp,
+    inRange,
+    head,
+    indexOf,
+    initial,
+    last,
   };
 }()
