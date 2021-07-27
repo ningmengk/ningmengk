@@ -26,9 +26,9 @@ var ningmengk = function () {
     }
     return a
   }
-  function difference(arr, ...[value]) {
+  function difference(arr, ...value) {
     var a = new Set(arr)
-    var b = concat(...[value])
+    var b = [].concat(...value)
     for (var x of b) {
       if(a.has(x)) a.delete(x)
     }
@@ -115,10 +115,9 @@ var ningmengk = function () {
     }
     return false
   }
-  function inRange(number, start, end = undefined) {
-    if (end = undefined) {
-      end = start
-      start = 0 
+  function inRange(number, start, end = 0) {
+    if (start >end) {
+      [start, end] =[end,start]
     }
     return number>=start && number<end
   }
