@@ -27,11 +27,7 @@ var ningmengk = function () {
     return a
   }
   function difference(arr, [value]) {
-    var a = new Set()
-    for (let x of arr) {
-      a.add(x)
-    }
-    var b = []
+    var a = new Set(arr)
     for (var x of [value]) {
       if(a.has(x)) a.delete(x)
     }
@@ -80,8 +76,8 @@ var ningmengk = function () {
     return number + number2
   }
   function max(arr) {
-    var a 
-    for (var i = 0; i < arr.length-1; i++){
+    var a =arr[0]
+    for (var i = 0; i < arr.length - 1; i++){
       if (arr[i] > a) {
         a = arr[i]
       }
@@ -96,7 +92,7 @@ var ningmengk = function () {
     return sum/arr.length
   }
   function min(arr) {
-    var a 
+    var a =arr[0]
     for (var i = 0; i < arr.length - 1; i++){
       if (arr[i] < a) {
         a = arr[i]
@@ -118,16 +114,15 @@ var ningmengk = function () {
     }
     return false
   }
-  function inRange(number, [start = 0], end) {
+  function inRange(number,end,start = 0,) {
     return number>=start && number<end
-
   }
   function head(array) {
     return array[0]
   }
   function indexOf(array, value, fromIndex = 0) {
     if (fromIndex < 0) {
-      for (var i = arr.length - 1; i >= 0; i--) {
+      for (var i = array.length - 1; i >= 0; i--) {
         if (array[i] = value) {
           return i + 1
         }
