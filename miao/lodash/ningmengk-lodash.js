@@ -158,6 +158,70 @@ var ningmengk = function () {
   function subtract(minuend, subtrahend) {
     return minuend- subtrahend
   }
+  function fill(array, value, start = 0, end = array.length) {
+    for (var i = start; i < end; i++){
+      array[i] = value
+    }
+    return array
+  }
+  function head(array) {
+    return array[0]
+  }
+  function pull(array, ...values) {
+    for (let x of array) {
+      if (x == value) {
+          array.delete(x)
+        }
+    }
+    return array
+  }
+  function tail(array) {
+    var a = []
+    for (let i = 1; array.length; i++){
+      a.push(arr[i])
+    }
+    return a
+  }
+  function take(array, n = 1) {
+    if (n = 0) return []
+    if(n> array.length) n=array.length
+    var a = []
+    for (var i = 0; i < n; i++){
+      a.push(array[i])
+    }
+    return a
+  }
+  function flattenDeep(array) {
+    var a = []
+    for (var i of array) {
+      a.push(i)
+    }
+    return a
+  }
+  function intersection(...arrs) {
+    
+    for (var x of arr) {
+      for (var y of x) {
+        if (arr.has(y)) {
+           return y
+         } 
+       }   
+    }
+  }
+  function fill(array, value, start = 0, end = array.length) {
+    for (; start <= end; start++){
+      array[start] = value
+    }
+    return array
+  }
+  function join(array, separator = ',') {
+    var a = ''
+    for (var x of array) {
+      a +=  x + separator
+    }
+    a = a - separator
+    return a
+  }
   return {
     chunk,
     compact,
@@ -183,5 +247,13 @@ var ningmengk = function () {
     nth,
     divided,
     subtract,
+    fill,
+    head,
+    pull,
+    tail,
+    take,
+    flattenDeep,
+    intersection,
+    join
   };
 }()
