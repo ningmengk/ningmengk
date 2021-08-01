@@ -192,7 +192,15 @@ var ningmengk = function () {
     return a
   }
   function flattenDeep(array) {
- 
+    var a = []
+    for (var x of array) {
+      if (Array.isArray(x)) {
+        for(var y of x) a.push(y)
+      } else {
+        a.push(x)
+      }
+    }
+    return a
   }
 
   function fill(array, value, start = 0, end = array.length) {
