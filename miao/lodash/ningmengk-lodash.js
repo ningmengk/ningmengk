@@ -192,34 +192,23 @@ var ningmengk = function () {
     return a
   }
   function flattenDeep(array) {
-    var a = []
-    for (var i of array) {
-      a.push(i)
-    }
-    return a
+ 
   }
-  function intersection(...arrs) {
-    
-    for (var x of arr) {
-      for (var y of x) {
-        if (arr.has(y)) {
-           return y
-         } 
-       }   
-    }
-  }
+
   function fill(array, value, start = 0, end = array.length) {
-    for (; start <= end; start++){
+    for (; start <end; start++){
       array[start] = value
     }
     return array
   }
   function join(array, separator = ',') {
     var a = ''
-    for (var x of array) {
-      a +=  x + separator
+    for (var i = 0; i < array.length; i++){
+      a += array[i] 
+      if(i == array.length - 1) continue
+      a += separator
+
     }
-    a = a - separator
     return a
   }
   return {
@@ -253,7 +242,6 @@ var ningmengk = function () {
     tail,
     take,
     flattenDeep,
-    intersection,
     join
   };
 }()
