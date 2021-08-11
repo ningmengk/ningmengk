@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+#red{
+  width:200px; 
+  height:200px;
+  top: 100px;
+  position:absolute;
+  background-color: red;
+  border: 2px solid;
+}
+#green{
+  width: 150px; 
+  height: 150px;
+  left: 200px; 
+  top: 100px;
+  position:absolute;
+  background-color: green;
+  border: 2px solid;
+}
+#yellow{
+  width:100px;
+  height:100px;
+  left: 350px; 
+  top: 100px;
+  position:absolute;
+  background-color: yellow;
+  border: 2px solid;
+}
+</style>
+<body>
+  <div   class = "box"  id="red"></div>
+  <div   class = "box"  id="green"></div>
+  <div   class = "box"  id="yellow"></div>
+</body>
+<script>
+  var  box = document.querySelectorAll('.box')
+  var indexi = 1
+  for(let i of box){
+  const mousedown = (e) =>{
+    console.log('鼠标点击位置 ———— 距离浏览器最左边的位置：'+e.clientX)
+    console.log('元素距离浏览器最左边的位置：' + i.offsetLeft)
+    let offsetleft = i.offsetLeft
+    let offsettop = i.offsetTop
+    let x = e.clientX - offsetleft
+    let y = e.clientY - offsettop 
+    
+
+   
+    i.style.borderWidth = "2px"
+    i.style.borderStyle = "soild"
+    i.style.borderColor = "balck"
+
+    document.onmousemove = function(e){
+      i.style.left = e.clientX - x +"px"
+      i.style.top =  e.clientY - y +"px"
+      i.style.zIndex = indexi++
+    }
+
+    document.onmouseup = function(){
+      document.onmousemove = null
+      document.mousedown=null
+      control()
+      i.style.borderWidth = " "
+      i.style.borderStyle = " "
+      i.style.borderColor = " "
+    
+    }
+    const control = function(){
+      if(i.offsetleft < 0) i.style.left = 0 + "px"
+      if(i.offsettop < 0) i.style.top = 0 + "px"
+      if(i.offsetleft+i.style.width >window.innerWidth){
+        i.style.left = window.innerWidth - i.style.left + "px"
+      }
+      if(i.offsettop+i.style.height > window.innerHeight){
+        i.style.top = window.innerHeight - i.style.top + "px"
+      }
+    }
+  }
+  i.addEventListener('mousedown',mousedown,false)
+}
+</script>
+</html>
