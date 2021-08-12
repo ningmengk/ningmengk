@@ -57,11 +57,7 @@ body {
     let y = e.clientY - offsettop 
     
 
-   
-    i.style.borderWidth = "2px"
-    i.style.borderStyle = "soild"
-    i.style.borderColor = "balck"
-
+ 
     document.onmousemove = function(e){
       i.style.left = e.clientX - x +"px"
       i.style.top =  e.clientY - y +"px"
@@ -72,9 +68,7 @@ body {
       document.onmousemove = null
       document.mousedown=null
       control()
-      i.style.borderWidth = " "
-      i.style.borderStyle = " "
-      i.style.borderColor = " "
+
     
     }
     const control = function(){
