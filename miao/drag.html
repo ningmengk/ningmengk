@@ -68,21 +68,19 @@ body {
       document.onmousemove = null
       document.mousedown=null
       control()
-
-    
     }
-    const control = function(){
-      if(i.offsetleft < 0) i.style.left = 0 + "px"
-      if(i.offsettop < 0) i.style.top = 0 + "px"
-      if(i.offsetleft+i.style.width >window.innerWidth){
+    var control = function(){
+      if(i.offsetLeft < 0) i.style.left = 0 + "px"
+      if(i.offsetTop < 0) i.style.top = 0 + "px"
+      if(i.offsetLeft+i.style.width >window.innerWidth){
         i.style.left = window.innerWidth - i.style.left + "px"
       }
-      if(i.offsettop+i.style.height > window.innerHeight){
+      if(i.offsetTop+i.style.height > window.innerHeight){
         i.style.top = window.innerHeight - i.style.top + "px"
       }
     }
   }
-  i.addEventListener('mousedown',mousedown,false)
+  i.addEventListener('mousedown',mousedown)
 }
 </script>
 </html>
