@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var last = 0
+  var c = 1
+  var clear
+  window.addEventListener("click",e=>{
+    var time = Date.now()
+    clearTimeout(clear)
+    clear = setTimeout(()=>{
+      c = 1
+    },200)
+    if(time - last <200){
+      c++
+    }
+    if(c == 3){
+      console.log("3")
+    }
+    if(c == 4){
+      console.log("4")
+    }
+    if(c == 5){
+      console.log("5")
+    }
+    if(c == 6){
+      console.log("6")
+    }
+    last = time
+  })
+
+
+  </script>
+</html>
