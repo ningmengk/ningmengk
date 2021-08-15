@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  span.mouse-shadow{
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    background-color: red;
+    border-radius: 9999px;
+  }
+
+
+</style>
+<body>
+</body>
+<script>
+  var x =-999
+  var y =-999
+  
+  var res = []
+  function getspan(){
+    if(res.length){
+      return res.pop()
+    }else{
+      return document.createElement("span")
+    }
+  }
+  addEventListener("mousemove", e => {
+    x = e.clientX
+    y = e.clientY
+  })
+
+  requestAnimationFrame( function ani(){
+    var span =  document.createElement('span');
+    span.classList.add('mouse-shadow');
+
+    span.style.left = x +"px"
+    span.style.top = y+"px"
+
+    document.body.append(span);
+    
+    setTimeout(()=>{
+      document.body.removeChild(span);
+      res.push(span)
+    },16*8)
+
+    requestAnimationFrame(ani)
+  })
+
+</script>
+</html>
